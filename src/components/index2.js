@@ -63,43 +63,22 @@ export default class App extends Component {
     this.removeListener()
   }
   render() {
+    const routeInfo = [
+        { displayName: 'ABOUT',
+          link: '/about',
+        },
+        { displayName: 'HOME',
+          link: '/home',
+        },
+        { displayName: 'CONTACT',
+          link: 'https://www.mycontactform.com/',
+        },
+      ];
     return this.state.loading === true ? <h1>Loading</h1> : (
       <HashRouter>
         <div>
-          <nav className="navbar navbar-default navbar-static-top">
-            <div className="container">
-              <div className="navbar-header">
-                <Link to="/" className="navbar-brand">HiGarfield</Link>
-              </div>
-              <ul className="nav navbar-nav pull-right">
-                <li>
-                  <Link to="/" className="navbar-brand">Home</Link>
-                </li>
-                <li>
-                  <Link to="/allcartoon" className="navbar-brand">AllCartoon</Link>
-                </li>
-                <li>
-                  <a href="https://request-cartoon.sysadmin.payungsakpk.xyz/" className="navbar-brand">RequestCartoon</a>
-                </li>
-                <li>
-                  <Link to="/about" className="navbar-brand">About</Link>
-                </li>
-                <li>
-                  {this.state.authed
-                    ? <button
-                        style={{border: 'none', background: 'transparent'}}
-                        onClick={() => {
-                          logout()
-                        }}
-                        className="navbar-brand">Logout</button>
-                    : <span>
-                        <Link to="/login" className="navbar-brand">Login</Link>
-                        <Link to="/register" className="navbar-brand">Register</Link>
-                      </span>}
-                </li>
-              </ul>
-            </div>
-          </nav>
+        <Navbar routeInfo={routeInfo} />
+        {this.props.children}
           <div className="container">
             <div className="row">
               <Switch>

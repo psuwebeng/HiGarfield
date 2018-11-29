@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import { Route, HashRouter, Link, Redirect, Switch } from 'react-router-dom'
+import { Route, BrowserRouter, Link, Redirect, Switch } from 'react-router-dom'
 
 import Login from './Login'
 import Register from './Register'
 import Home from './Home'
+import Dashboard from './protected/Dashboard'
 import AllCartoon from './protected/AllCartoon'
 import About from './About'
 
@@ -64,7 +65,7 @@ export default class App extends Component {
   }
   render() {
     return this.state.loading === true ? <h1>Loading</h1> : (
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <nav className="navbar navbar-default navbar-static-top">
             <div className="container">
@@ -107,6 +108,7 @@ export default class App extends Component {
                 <PublicRoute authed={this.state.authed} path='/login' component={Login} />
                 <PublicRoute authed={this.state.authed} path='/register' component={Register} />
                 <Route  path='/about' component={About} />
+                <PrivateRoute authed={this.state.authed} path='/dashboard' component={Dashboard} />
                 <PrivateRoute authed={this.state.authed} path='/allcartoon' component={AllCartoon} />
                 <PrivateRoute authed={this.state.authed} path='/cartoon1' component={Cartoon1} />
                 <PrivateRoute authed={this.state.authed} path='/cartoon2' component={Cartoon2} />
@@ -116,7 +118,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

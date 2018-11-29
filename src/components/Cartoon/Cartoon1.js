@@ -9,13 +9,13 @@ export default class Cartoon1 extends Component {
             <h2>Garfield - 1</h2>
             <p>Good eveing folks!!</p>
             <div className="col-sm-6 col-sm-offset-3">
-                <img alt="cartoon1-1" src="/images/AllCartoon/Cartoon1/1.gif" width="256" height="256"/>
+                <img alt="cartoon1-1" src="https://cartoon.sysadmin.payungsakpk.xyz/images/AllCartoon/Cartoon1/1.gif" width="256" height="256"/>
             </div>
             <div className="col-sm-6 col-sm-offset-3">
-                <img alt="cartoon1-2" src="/images/AllCartoon/Cartoon1/2.gif" width="256" height="256"/>
+                <img alt="cartoon1-2" src="https://cartoon.sysadmin.payungsakpk.xyz/images/AllCartoon/Cartoon1/2.gif" width="256" height="256"/>
             </div>
             <div className="col-sm-6 col-sm-offset-3">
-                <img alt="cartoon1-3" src="/images/AllCartoon/Cartoon1/3.gif" width="256" height="256"/>
+                <img alt="cartoon1-3" src="https://cartoon.sysadmin.payungsakpk.xyz/images/AllCartoon/Cartoon1/3.gif" width="256" height="256"/>
             </div>
         </div>
         <div className="col-sm-6 col-sm-offset-3">
