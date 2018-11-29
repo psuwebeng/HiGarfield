@@ -1,6 +1,4 @@
-//import firebase  from './firebaseConfig'
-//import * as firebase from 'firebase';
-import firebase from 'firebase';
+import firebase  from './firebaseConfig'
 const config = {
   apiKey: "AIzaSyDWv0ytli8it30rUKiF6MwAW8rJC_NFSTE",
   authDomain: "webeng-hybrid-app.firebaseapp.com",
